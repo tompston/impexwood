@@ -36,7 +36,15 @@
     <meta property="og:image:height" content="100" />
   </head>
   <body>
-    <style></style>
+    <style>
+      [data-aos="aos-opacity"] {
+        opacity: 0;
+        transition-property: opacity;
+      }
+      [data-aos="aos-opacity"].aos-animate {
+        opacity: 1;
+      }
+    </style>
 
     <header class="header_content" v-scope="{ navIsShown: false }" id="header">
       <!-- Header block -->
@@ -147,8 +155,8 @@
             src="/img/tc.jpeg"
             alt="image showing the territory of the factory"
             class="section__2_img"
-            data-aos="fade-up"
-            data-aos-duration="1200"
+            data-aos="aos-opacity"
+            data-aos-duration="500"
             data-aos-delay="200"
             data-aos-easing="ease-in-out"
           />
@@ -162,8 +170,8 @@
         <div class="section__3">
           <div
             class="max-w-780 text-3"
-            data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos="aos-opacity"
+            data-aos-duration="500"
             data-aos-delay="0"
             data-aos-easing="ease-in-out"
           >
@@ -179,8 +187,8 @@
     <!-- History section -->
     <div
       class="flex-center history_section"
-      data-aos="fade-up"
-      data-aos-duration="1000"
+      data-aos="aos-opacity"
+      data-aos-duration="500"
       data-aos-delay="100"
       data-aos-easing="ease-in-out"
     >
@@ -266,8 +274,8 @@
         <div class="grid products_parent_grid products__1">
           <div
             class="grid products_parent_left products__1_0"
-            data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos="aos-opacity"
+            data-aos-duration="400"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
           >
@@ -288,8 +296,8 @@
           </div>
           <div
             class="products_parent_right products__1_1"
-            data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos="aos-opacity"
+            data-aos-duration="500"
             data-aos-delay="200"
             data-aos-easing="ease-in-out"
           >
@@ -313,8 +321,8 @@
         <div class="grid products_parent_grid products__2">
           <div
             class="grid products_parent_left products__2_0"
-            data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos="aos-opacity"
+            data-aos-duration="400"
             data-aos-delay="100"
             data-aos-easing="ease-in-out"
           >
@@ -331,8 +339,8 @@
           </div>
           <div
             class="products_parent_right products__2_1"
-            data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos="aos-opacity"
+            data-aos-duration="500"
             data-aos-delay="200"
             data-aos-easing="ease-in-out"
           >
@@ -355,8 +363,8 @@
       <div class="max-width-1 section_seperator">
         <div
           class="grid products_parent_grid products__3"
-          data-aos="fade-up"
-          data-aos-duration="800"
+          data-aos="aos-opacity"
+          data-aos-duration="400"
           data-aos-delay="100"
           data-aos-easing="ease-in-out"
         >
@@ -367,8 +375,8 @@
           </div>
           <div
             class="products_parent_right products__3_1"
-            data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos="aos-opacity"
+            data-aos-duration="500"
             data-aos-delay="200"
             data-aos-easing="ease-in-out"
           >
