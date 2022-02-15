@@ -1,0 +1,16 @@
+{
+  "name": "impexwood",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "npm run build && serve dist -l 5000",
+    "postbuild": "purgecss --css dist/assets/*.css --content dist/index.html -o dist/assets/  --safelist html body"
+  },
+  "devDependencies": {
+    "vite": "^2.7.2"
+  },
+  "dependencies": {
+    "purgecss": "^4.1.3"
+  }
+}
