@@ -17,10 +17,10 @@
   font-family: "Poppins-Light";
   src: url(../fonts/Poppins-Light.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: "Poppins-ExtraLight";
   src: url(../fonts/Poppins-ExtraLight.ttf);
-}
+} */
 
 :root {
   /* max-width for the main content */
@@ -32,7 +32,7 @@
   --font-fam-2: Poppins-Medium;
   --font-fam-3: Poppins-Regular;
   --font-fam-4: Poppins-Light;
-  --font-fam-5: Poppins-ExtraLight;
+  /* --font-fam-5: Poppins-ExtraLight; */
   --font-fam-6: sans-serif;
 
   /* define the color palette */
