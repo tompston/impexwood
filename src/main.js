@@ -6,4 +6,3 @@ import "./css/media.css"
 
 // import "./js/gsap_animations"
 import "./js/vue"
-

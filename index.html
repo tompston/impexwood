@@ -1,502 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--  -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- main  -->
-    <title>Impexwood</title>
-    <meta
-      name="description"
-      content="Order Pellets and Finger-jointed wood. Wood processing in Latvia. Environmentally friendly biofuel"
-    />
-    <!-- <link rel="canonical" href="http://mercor.lv/" /> -->
+  <!--  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- og  -->
-    <meta
-      property="og:description"
-      content="Order Pellets and Finger-jointed wood. Wood processing in Latvia. Environmentally friendly biofuel"
-    />
-    <meta property="og:title" content="Impexwood" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Impexwood" />
-    <!-- <meta property="og:url" content="http://mercor.lv/" /> -->
+  <!-- main  -->
+  <title>Impexwood</title>
+  <meta name="description"
+    content="Order Pellets and Finger-jointed wood. Wood processing in Latvia. Environmentally friendly biofuel" />
 
-    <!-- link to the public img -->
-    <meta property="og:image" content="/gallery/ico.jpg" />
-    <meta property="og:image:width" content="100" />
-    <meta property="og:image:height" content="100" />
-  </head>
-  <body>
-    <style>
-      [data-aos="aos-opacity"] {
-        opacity: 0;
-        transition-property: opacity;
-      }
-      [data-aos="aos-opacity"].aos-animate {
-        opacity: 1;
-      }
-    </style>
+  <!-- og  -->
+  <meta property="og:description"
+    content="Order Pellets and Finger-jointed wood. Wood processing in Latvia. Environmentally friendly biofuel" />
+  <meta property="og:title" content="Impexwood" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Impexwood" />
+  <!-- <meta property="og:url" content="http://mercor.lv/" /> -->
 
-    <header class="header_content" v-scope="{ navIsShown: false }" id="header">
-      <!-- Header block -->
+  <!-- link to the public img -->
+  <meta property="og:image" content="/gallery/ico.jpg" />
+  <meta property="og:image:width" content="100" />
+  <meta property="og:image:height" content="100" />
+</head>
+
+<body>
+  <style>
+    [data-aos="aos-opacity"] {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    [data-aos="aos-opacity"].aos-animate {
+      opacity: 1;
+    }
+  </style>
+
+  <header class="header_content" v-scope="{ navIsShown: false }" id="header">
+    <!-- Header block -->
+    <div class="flex-center">
+      <div class="max-width-1">
+        <div class="grid py-14 font-fam-1 fs-8 header">
+          <div class="header__left disable-text-select">IMPEXWOOD</div>
+          <div class="header__right">
+            <div class="disable-text-select flex-center header__right_link">
+              <a class="header_link_tag animated_link_tag_2" href="#products">Products</a>
+            </div>
+            <div class="disable-text-select flex-center header__right_link">
+              <a class="header_link_tag animated_link_tag_2" href="#gallery">Gallery</a>
+            </div>
+            <div class="disable-text-select flex-center header__right_link">
+              <a class="header_link_tag animated_link_tag_2" href="#contacts">Contacts</a>
+            </div>
+          </div>
+          <div class="hidden header__nav" @click="navIsShown =! navIsShown">
+            <img src="/svg/burger.svg" alt="" class="header__burger_img" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links block -->
+    <div v-if="navIsShown">
       <div class="flex-center">
         <div class="max-width-1">
-          <div class="grid py-16 font-fam-1 fs-8 header">
-            <div class="header__left disable-text-select">IMPEXWOOD</div>
-            <div class="header__right">
-              <div class="disable-text-select flex-center header__right_link">
-                <a class="header_link_tag animated_link_tag_2" href="#products"
-                  >Products</a
-                >
+          <div class="hidden bg-col-2 navigation_box">
+            <div class="grid navigation_content">
+              <div class="flex-center header__right_link">
+                <a class="header_link_tag animated_link_tag_2" href="#products" @click="navIsShown = false">Products</a>
               </div>
-              <div class="disable-text-select flex-center header__right_link">
-                <a class="header_link_tag animated_link_tag_2" href="#gallery">Gallery</a>
+              <div class="flex-center header__right_link">
+                <a class="header_link_tag animated_link_tag_2" href="#gallery" @click="navIsShown = false">Gallery</a>
               </div>
-              <div class="disable-text-select flex-center header__right_link">
-                <a class="header_link_tag animated_link_tag_2" href="#contacts"
-                  >Contacts</a
-                >
-              </div>
-            </div>
-            <div class="hidden header__nav" @click="navIsShown =! navIsShown">
-              <img src="/svg/burger.svg" alt="" class="header__burger_img" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Links block -->
-      <div v-if="navIsShown">
-        <div class="flex-center">
-          <div class="max-width-1">
-            <div class="hidden bg-col-2 navigation_box">
-              <div class="grid navigation_content">
-                <div class="flex-center header__right_link">
-                  <a
-                    class="header_link_tag animated_link_tag_2"
-                    href="#products"
-                    @click="navIsShown = false"
-                    >Products</a
-                  >
-                </div>
-                <div class="flex-center header__right_link">
-                  <a
-                    class="header_link_tag animated_link_tag_2"
-                    href="#gallery"
-                    @click="navIsShown = false"
-                    >Gallery</a
-                  >
-                </div>
-                <div class="flex-center header__right_link">
-                  <a
-                    class="header_link_tag animated_link_tag_2"
-                    href="#contacts"
-                    @click="navIsShown = false"
-                    >Contacts</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- top_section -->
-    <div class="flex-center">
-      <div class="max-width-1">
-        <div class="grid top_content">
-          <div class="top_content_whitespace"></div>
-          <div class="header-1 top_content_headline">
-            <h1 class="top_content_header_max_w">
-              Self-sustaining wood processing enterprise
-            </h1>
-          </div>
-          <div class="top_content_subtext">
-            with the goal of full processing cycle. From planning mill till finger
-            jointing elements and down to pallet and pellet production.
-          </div>
-          <div class="flex top_content_btn_grid mt-10">
-            <div>
-              <a class="both-100 pointer remove-decorations" href="#contacts"
-                ><button class="button-1 btn__1">Contact Us</button></a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Territory grid -->
-    <div class="flex-center">
-      <div class="max-width-1">
-        <div class="section__2">
-          <img
-            src="/img/tc.jpeg"
-            alt="image showing the territory of the factory"
-            class="section__2_img"
-            data-aos="aos-opacity"
-            data-aos-duration="500"
-            data-aos-delay="200"
-            data-aos-easing="ease-in-out"
-          />
-        </div>
-      </div>
-    </div>
-
-    <!-- Mini details text -->
-    <div class="flex-center">
-      <div class="max-width-1 mb-40">
-        <div class="section__3">
-          <div
-            class="max-w-780 text-3"
-            data-aos="aos-opacity"
-            data-aos-duration="500"
-            data-aos-delay="0"
-            data-aos-easing="ease-in-out"
-          >
-            What started as simple wood processing company back in 2012 in making of knot
-            free components with a few employees and 400m2 meters of production plant has
-            grown in to big scale plant covering over 4000 m2 of production floor ,
-            employing over 60 people on daily basis.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- History section -->
-    <div
-      class="flex-center history_section"
-      data-aos="aos-opacity"
-      data-aos-duration="500"
-      data-aos-delay="100"
-      data-aos-easing="ease-in-out"
-    >
-      <div class="max-width-1 section_seperator">
-        <h1 class="header-3 section_header">History</h1>
-
-        <div class="grid history_grid">
-          <!-- 2017 -->
-          <div class="grid hist_child">
-            <div class="history_year">
-              <div>20</div>
-              <div>17</div>
-            </div>
-            <div class="history_list">
-              <ul class="history_list">
-                <li class="history_list_item">
-                  Added new pellet factory that reprocesses all waste into fuel
-                  pelletswith capacity of 500t/month
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- 2018 -->
-          <div class="grid hist_child">
-            <div class="history_year">
-              <div>20</div>
-              <div>18</div>
-            </div>
-            <div class="history_list">
-              <ul class="history_list">
-                <li class="history_list_item">
-                  Acquired 2,5ha of addition land 1800m2 of production buildings where new
-                  planning line was installed in combination with wood eye grading and 2
-                  Opti cut units for automatization of processes
-                </li>
-                <li class="history_list_item">
-                  Started a Finger jointing line in combination with the 2 Opti cut units
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- 2019 -->
-          <div class="grid hist_child">
-            <div class="history_year">
-              <div>20</div>
-              <div>19</div>
-            </div>
-            <div class="history_list">
-              <ul class="history_list">
-                <li class="history_list_item">
-                  Added pallet production that covers us with all pallets needed to
-                  support our running productions
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- 2021 -->
-          <div class="grid hist_child">
-            <div class="history_year">
-              <div>20</div>
-              <div>21</div>
-            </div>
-            <div class="history_list">
-              <ul class="history_list">
-                <li class="history_list_item">
-                  New project of putting in place 2000 m2 of production space for
-                  additional production units
-                </li>
-                <li class="history_list_item">
-                  Planning line to serve construction market needs inside the domestic
-                  market and exports
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Products section 1 -->
-    <div class="flex-center" id="products">
-      <div class="max-width-1 section_seperator">
-        <div class="grid products_parent_grid products__1">
-          <div
-            class="grid products_parent_left products__1_0"
-            data-aos="aos-opacity"
-            data-aos-duration="400"
-            data-aos-delay="100"
-            data-aos-easing="ease-in-out"
-          >
-            <div class="header-3 section_header">Finger-jointed glued wood</div>
-            <div class="text-3 mt-10">
-              We produce 7,000m3 finger jointed and glued components per year. The
-              dimensions and quality class of the material is produced according to the
-              customer's needs.
-            </div>
-            <div class="text-3 mt-12">
-              Use of finger-jointed glued wood in
-              <ul>
-                <li>Window and door components</li>
-                <li>Structural design material</li>
-                <li>Slats & Tiles</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="products_parent_right products__1_1"
-            data-aos="aos-opacity"
-            data-aos-duration="500"
-            data-aos-delay="200"
-            data-aos-easing="ease-in-out"
-          >
-            <div class="flex-center both-100 product_image_container">
-              <div class="products_img_div">
-                <img
-                  src="/img/00.jpeg"
-                  alt="image showing the territory of the factory"
-                  class="image_container"
-                  loading="lazy"
-                />
+              <div class="flex-center header__right_link">
+                <a class="header_link_tag animated_link_tag_2" href="#contacts" @click="navIsShown = false">Contacts</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- Products section 2 -->
-    <div class="flex-center">
-      <div class="max-width-1 section_seperator">
-        <div class="grid products_parent_grid products__2">
-          <div
-            class="grid products_parent_left products__2_0"
-            data-aos="aos-opacity"
-            data-aos-duration="400"
-            data-aos-delay="100"
-            data-aos-easing="ease-in-out"
-          >
-            <div class="header-3 section_header">Pellets</div>
-            <div class="text-3">
-              Premium quality wood pellets as an environmentally friendly biofuel, which
-              has a significantly cheaper price compared to other types of heating.
-            </div>
-            <div class="text-3 mt-12">
-              We offer 6 and 8 mm diameter pellets either by 15kg bags or big bag packing
-              , which we produce from clean sawdust with lowest ash content possible out
-              of our own raw materials.
-            </div>
+  <!-- top_section -->
+  <div class="flex-center">
+    <div class="max-width-1">
+      <div class="grid top_content">
+        <div class="top_content_whitespace"></div>
+        <div class="header-1 top_content_headline">
+          <h1 class="top_content_header_max_w">
+            Self-sustaining wood processing enterprise
+          </h1>
+        </div>
+        <div class="top_content_subtext text-op">
+          with the goal of full processing cycle. From planning mill till finger
+          jointing elements and down to pallet and pellet production.
+        </div>
+        <div class="flex top_content_btn_grid mt-10">
+          <div>
+            <a class="both-100 pointer remove-decorations" href="#contacts"><button class="button-1 btn__1">Contact
+                Us</button></a>
           </div>
-          <div
-            class="products_parent_right products__2_1"
-            data-aos="aos-opacity"
-            data-aos-duration="500"
-            data-aos-delay="200"
-            data-aos-easing="ease-in-out"
-          >
-            <div class="flex-center both-100 product_image_container">
-              <div class="products_img_div">
-                <img
-                  src="/img/01.jpeg"
-                  alt="image showing the territory of the factory"
-                  class="image_container"
-                  loading="lazy"
-                />
-              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Territory grid -->
+  <div class="flex-center">
+    <div class="max-width-1">
+      <div class="section__2">
+        <img src="/img/tc.jpeg" alt="image showing the territory of the factory" class="section__2_img"
+          data-aos="aos-opacity" data-aos-duration="500" data-aos-delay="200" data-aos-easing="ease-in-out" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Mini details text -->
+  <div class="flex-center">
+    <div class="max-width-1 mb-40">
+      <div class="section__3">
+        <div class="max-w-780 text-3 " data-aos="aos-opacity" data-aos-duration="500" data-aos-delay="0"
+          data-aos-easing="ease-in-out">
+          What started as simple wood processing company back in 2012 in making of knot
+          free components with a few employees and 400m2 meters of production plant has
+          grown in to big scale plant covering over 4000 m2 of production floor ,
+          employing over 60 people on daily basis.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- History section -->
+  <div class="flex-center history_section" data-aos="aos-opacity" data-aos-duration="500" data-aos-delay="100"
+    data-aos-easing="ease-in-out">
+    <div class="max-width-1 section_seperator">
+      <h1 class="header-3 section_header">History</h1>
+
+      <div class="grid history_grid">
+        <!-- 2017 -->
+        <div class="grid hist_child">
+          <div class="history_year">
+            <div>20</div>
+            <div>17</div>
+          </div>
+          <div class="history_list">
+            <ul class="history_list">
+              <li class="history_list_item">
+                Added new pellet factory that reprocesses all waste into fuel
+                pelletswith capacity of 500t/month
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 2018 -->
+        <div class="grid hist_child">
+          <div class="history_year">
+            <div>20</div>
+            <div>18</div>
+          </div>
+          <div class="history_list">
+            <ul class="history_list">
+              <li class="history_list_item">
+                Acquired 2,5ha of addition land 1800m2 of production buildings where new
+                planning line was installed in combination with wood eye grading and 2
+                Opti cut units for automatization of processes
+              </li>
+              <li class="history_list_item">
+                Started a Finger jointing line in combination with the 2 Opti cut units
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 2019 -->
+        <div class="grid hist_child">
+          <div class="history_year">
+            <div>20</div>
+            <div>19</div>
+          </div>
+          <div class="history_list">
+            <ul class="history_list">
+              <li class="history_list_item">
+                Added pallet production that covers us with all pallets needed to
+                support our running productions
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 2021 -->
+        <div class="grid hist_child">
+          <div class="history_year">
+            <div>20</div>
+            <div>21</div>
+          </div>
+          <div class="history_list">
+            <ul class="history_list">
+              <li class="history_list_item">
+                New project of putting in place 2000 m2 of production space for
+                additional production units
+              </li>
+              <li class="history_list_item">
+                Planning line to serve construction market needs inside the domestic
+                market and exports
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products section 1 -->
+  <div class="flex-center" id="products">
+    <div class="max-width-1 section_seperator">
+      <div class="grid products_parent_grid products__1">
+        <div class="grid products_parent_left products__1_0" data-aos="aos-opacity" data-aos-duration="400"
+          data-aos-delay="100" data-aos-easing="ease-in-out">
+          <div class="header-3 section_header">Finger-jointed glued wood</div>
+          <div class="text-3 mt-10">
+            We produce 7,000m3 finger jointed and glued components per year. The
+            dimensions and quality class of the material is produced according to the
+            customer's needs.
+          </div>
+          <div class="text-3 mt-12">
+            Use of finger-jointed glued wood in
+            <ul>
+              <li>Window and door components</li>
+              <li>Structural design material</li>
+              <li>Slats & Tiles</li>
+            </ul>
+          </div>
+        </div>
+        <div class="products_parent_right products__1_1" data-aos="aos-opacity" data-aos-duration="500"
+          data-aos-delay="200" data-aos-easing="ease-in-out">
+          <div class="flex-center both-100 product_image_container">
+            <div class="products_img_div">
+              <img src="/img/00.jpeg" alt="image showing the territory of the factory" class="image_container"
+                loading="lazy" />
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Products section 3 -->
-    <div class="flex-center">
-      <div class="max-width-1 section_seperator">
-        <div
-          class="grid products_parent_grid products__3"
-          data-aos="aos-opacity"
-          data-aos-duration="400"
-          data-aos-delay="100"
-          data-aos-easing="ease-in-out"
-        >
-          <div class="grid products_parent_left products__3_0">
-            <div class="header-3 section_header">
-              Finger jointed knotfree pine and spruce boards
-            </div>
+  <!-- Products section 2 -->
+  <div class="flex-center">
+    <div class="max-width-1 section_seperator">
+      <div class="grid products_parent_grid products__2">
+        <div class="grid products_parent_left products__2_0" data-aos="aos-opacity" data-aos-duration="400"
+          data-aos-delay="100" data-aos-easing="ease-in-out">
+          <div class="header-3 section_header">Pellets</div>
+          <div class="text-3">
+            Premium quality wood pellets as an environmentally friendly biofuel, which
+            has a significantly cheaper price compared to other types of heating.
           </div>
-          <div
-            class="products_parent_right products__3_1"
-            data-aos="aos-opacity"
-            data-aos-duration="500"
-            data-aos-delay="200"
-            data-aos-easing="ease-in-out"
-          >
-            <div class="flex sizes_grid">
-              <div class="size_box">16x75/100/125mm</div>
-              <div class="size_box">19x75/100/125/150mm</div>
-              <div class="size_box">22x100</div>
-              <div class="size_box">25x75/100/125/150mm</div>
-              <div class="size_box">32x75/100/125/150/200mm</div>
+          <div class="text-3 mt-12">
+            We offer 6 and 8 mm diameter pellets either by 15kg bags or big bag packing
+            , which we produce from clean sawdust with lowest ash content possible out
+            of our own raw materials.
+          </div>
+        </div>
+        <div class="products_parent_right products__2_1" data-aos="aos-opacity" data-aos-duration="500"
+          data-aos-delay="200" data-aos-easing="ease-in-out">
+          <div class="flex-center both-100 product_image_container">
+            <div class="products_img_div">
+              <img src="/img/01.jpeg" alt="image showing the territory of the factory" class="image_container"
+                loading="lazy" />
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Products section 3 -->
-    <div class="flex-center" id="gallery">
-      <div class="max-width-1 section_seperator">
-        <div class="flex gallery_grid">
-          <div class="gallery_child gallery_img_0">
-            <img
-              src="/gallery/001.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
+  <!-- Products section 3 -->
+  <div class="flex-center">
+    <div class="max-width-1 section_seperator">
+      <div class="grid products_parent_grid products__3" data-aos="aos-opacity" data-aos-duration="400"
+        data-aos-delay="100" data-aos-easing="ease-in-out">
+        <div class="grid products_parent_left products__3_0">
+          <div class="header-3 section_header">
+            Finger jointed knotfree pine and spruce boards
           </div>
-          <div class="gallery_child gallery_img_1">
-            <img
-              src="/gallery/002.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery_child gallery_img_2">
-            <img
-              src="/gallery/003.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery_child gallery_img_3">
-            <img
-              src="/gallery/004.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery_child gallery_img_4">
-            <img
-              src="/gallery/005.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery_child gallery_img_5">
-            <img
-              src="/gallery/006.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery_child gallery_img_6">
-            <img
-              src="/gallery/007.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery_child gallery_img_7">
-            <img
-              src="/gallery/008.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery_child gallery_img_8">
-            <img
-              src="/gallery/009.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
-          </div>
-          <div class="gallery_child gallery_img_9">
-            <img
-              src="/gallery/010.jpg"
-              alt="image from the factory"
-              class="gallery_child_img"
-              loading="lazy"
-            />
+        </div>
+        <div class="products_parent_right products__3_1" data-aos="aos-opacity" data-aos-duration="500"
+          data-aos-delay="200" data-aos-easing="ease-in-out">
+          <div class="flex sizes_grid">
+            <div class="size_box">16x75/100/125mm</div>
+            <div class="size_box">19x75/100/125/150mm</div>
+            <div class="size_box">22x100</div>
+            <div class="size_box">25x75/100/125/150mm</div>
+            <div class="size_box">32x75/100/125/150/200mm</div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <hr class="hr-1-3" />
-    <!-- Products section 3 -->
-    <div class="flex-center footer" id="contacts">
-      <div class="max-width-1">
-        <div class="grid footer_content">
-          <div class="grid footer_left">
-            <div class="fs-9 font-fam-4 disable-text-select">IMPEXWOOD</div>
-          </div>
-          <!--  -->
-          <div class="grid footer_right max-w-500">
-            <div class="grid footer_right_label_and_info_grid">
-              <div class="footer_label_cell">email</div>
-              <a class="footer_value_cell" href="mailto:info@impexwood.lv"
-                >info@impexwood.lv</a
-              >
-            </div>
-            <div class="grid footer_right_label_and_info_grid">
-              <div class="footer_label_cell">phone</div>
-              <a class="footer_value_cell" href="tel:+37129194338">+371 29194338</a>
-            </div>
-          </div>
+  <!-- Products section 3 -->
+  <div class="flex-center" id="gallery">
+    <div class="max-width-1 section_seperator">
+      <div class="flex gallery_grid">
+        <div class="gallery_child gallery_img_0">
+          <img src="/gallery/001.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_1">
+          <img src="/gallery/002.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_2">
+          <img src="/gallery/003.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_3">
+          <img src="/gallery/004.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_4">
+          <img src="/gallery/005.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_5">
+          <img src="/gallery/006.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_6">
+          <img src="/gallery/007.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_7">
+          <img src="/gallery/008.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_8">
+          <img src="/gallery/009.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
+        </div>
+        <div class="gallery_child gallery_img_9">
+          <img src="/gallery/010.jpg" alt="image from the factory" class="gallery_child_img" loading="lazy" />
         </div>
       </div>
     </div>
+  </div>
 
-    <script>
-      AOS.init()
-    </script>
+  <hr class="hr-1-3" />
+  <!-- Products section 3 -->
+  <div class="flex-center footer" id="contacts">
+    <div class="max-width-1">
+      <div class="grid footer_content">
+        <div class="grid footer_left">
+          <div class="fs-9 font-fam-4 disable-text-select">IMPEXWOOD</div>
+        </div>
+        <!--  -->
+        <div class="flex footer_right">
+          <div class="grid footer_right_label_and_info_grid">
+            <div class="footer_label_cell">Address</div>
+            <div class="footer_value_cell">
+              <div>Latvija, Limbaži</div>
+              <div>Meža iela 8, LV4001</div>
+            </div>
+          </div>
+          <div class="grid footer_right_label_and_info_grid">
+            <div class="footer_label_cell">Email</div>
+            <a class="footer_value_cell" href="mailto:info@impexwood.lv">info@impexwood.lv</a>
+          </div>
+          <div class="grid footer_right_label_and_info_grid">
+            <div class="footer_label_cell">Phone</div>
+            <a class="footer_value_cell" href="tel:+37129194338">+371 29194338</a>
+          </div>
 
-    <script type="module" src="./src/main.js"></script>
-  </body>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    AOS.init()
+  </script>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
 </html>

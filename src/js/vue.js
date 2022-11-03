@@ -1,3 +1,3 @@
-import { createApp } from "./cdn_petite_"
+import { createApp } from "./cdn_petite"
 
 createApp({}).mount()
