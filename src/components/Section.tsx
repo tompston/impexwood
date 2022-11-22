@@ -16,3 +16,5 @@ export function Section({ header, content, sectionClass }: SectionProps) {
 export function Header2({ name }: { name: string }) {
     return <h5 className='fw-600 mb-1.5'>{name}</h5>
 }
+
+// test
