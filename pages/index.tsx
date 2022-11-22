@@ -22,15 +22,15 @@ export default function Home() {
         <div className='mt-12 mb-[80px] grid gap-9'>
 
           {/* Top Block */}
-          <div className='grid grid-cols-[500px_1fr] md:grid-cols-[auto] md:grid-rows-[auto_auto] md:gap-5'>
+          <div className='grid grid-cols-[520px_1fr] md:grid-cols-[auto] md:grid-rows-[auto_auto] md:gap-5'>
             <div className='flex flex-col gap-3'>
-              <h2 className='leading-none'>Self-sustaining wood processing enterprise</h2>
+              <h2 className='leading-none fw-600 md:max-w-[300px]'>Self-sustaining wood processing enterprise</h2>
               <div>
-                <p className='max-w-[400px]'>with the goal of full processing cycle. From planning mill till finger jointing elements and down to pallet and pellet production.</p>
+                <p className='max-w-[400px] '>with the goal of full processing cycle. From planning mill till finger jointing elements and down to pallet and pellet production.</p>
               </div>
               <div>
                 <a href="#contacts" className='fw-400 contact_us__btn'>
-                  <button className='py-1.5 px-4 border-1-2 border-rad-4'>Contact Us</button>
+                  <button className='py-1.5 px-4 border-rad-4 bg-amber-500 hover:bg-amber-600 text-white hover:border-transparent'>Contact Us</button>
                 </a>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function Home() {
               What started as simple wood processing company back in 2012,
               making knot free components with a few employees and 400m2
               meters of production plant has grown in to big scale plant
-              covering over 4000 m2 of production floor, employing
+              covering over 4000m2 of production floor, employing
               over 60 people on daily basis.</p>
           </div>
 
@@ -53,7 +53,7 @@ export default function Home() {
           <Section header='History' content={<HistorySection />} />
           <Section header='Products' content={<ProductSection />} />
           <Section header='Gallery' content={<GallerySection />} />
-          <Section header='Contacts' content={<ContactsSection />} sectionClass="bg-slate-900 text-white px-10 py-10 border-rad-3" />
+          <Section header='Contacts' content={<ContactsSection />} sectionClass="bg-zinc-500-- bg-amber-600 text-white px-10 py-8 border-rad-3" />
         </div>
       </ContainerLayout>
 

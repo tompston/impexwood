@@ -1,6 +1,9 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
+// darkmode switcher
+import { ThemeProvider } from 'next-themes'
+
 // Global css
 import '../src/assets/css/index.css'
 
@@ -22,12 +25,15 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Impexwood" />
 
+        {/*  */}
         <meta property="og:image" content="/gallery/ico.jpg" />
         <meta property="og:image:width" content="100" />
         <meta property="og:image:height" content="100" />
-
       </Head>
-      <Component {...pageProps} />
+
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }

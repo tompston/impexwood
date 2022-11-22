@@ -1,7 +1,9 @@
 ### Impexwood homepage
 
 ```bash
-npm i       # install node modules
+npm i           # install node modules
+npm run dev     # run the app
+npm run build   # build the app
 ```
 
 ### references

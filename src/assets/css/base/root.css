@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Poppins-Bold";
   src: url(../../fonts/Poppins-Bold.ttf);
 }
@@ -11,8 +11,7 @@
 @font-face {
   font-family: "Poppins-Light";
   src: url(../../fonts/Poppins-Light.ttf);
-}
-
+} */
 
 :root {
   /* max-width for the main content */
@@ -24,9 +23,9 @@
   --max-width-6: 540px;
 
   /* font-family, used when custom fonts imported */
-  --font-fam-1: Poppins-Bold;
-  --font-fam-2: Poppins-Regular;
-  --font-fam-3: Poppins-Light;
+  --font-fam-1: sans-serif;
+  --font-fam-2: sans-serif;
+  --font-fam-3: sans-serif;
   --font-fam-4: sans-serif;
   --font-fam-5: sans-serif;
   --font-fam-6: sans-serif;
@@ -126,10 +125,11 @@
 [data-theme="dark"] :root {
   --global-bg-col: rgb(23, 25, 26);
   --global-txt-col: rgb(232, 230, 227);
+  --global-txt-col: rgb(234, 229, 221);
   /*  */
   --border-1-1: 1px solid rgba(255, 255, 255, 0.3);
   --border-1-2: 1px solid rgba(255, 255, 255, 0.15);
-  --border-1-3: 1px solid rgba(255, 255, 255, 0.08);
+  --border-1-3: 1px solid rgba(255, 255, 255, 0.15);
   --border-2-1: 2px solid rgba(255, 255, 255, 0.3);
   --border-2-2: 2px solid rgba(255, 255, 255, 0.15);
   --border-2-3: 2px solid rgba(255, 255, 255, 0.08);
@@ -137,7 +137,7 @@
   --code-bg: #0e0e0e;
   --code-txt: #e9e9e9;
   /*  */
-  --bg-light-select-1: rgb(21, 21, 21);
+  --bg-light-select-1: rgb(37, 37, 37);
   --bg-light-select-2: rgb(30, 30, 30);
 
   /*  */
