@@ -62,7 +62,10 @@ export default function Home() {
                 poster="/img/tc3.jpeg"
                 preload="none"
                 controls src="/mp4/factory.mp4"
-                className="border-rad-1 w-full h-[370px] max-w-[700px] max-h-[600px] border-[3px] border-amber-400 border-2-3-- "></video>
+                // className="border-rad-1 w-full h-[370px] max-w-[700px] max-h-[600px] border-[3px] border-amber-400 border-2-3-- "
+                className="w-full h-[370px] max-w-[700px] max-h-[600px] "
+                
+                ></video>
             </div>
           </div>
 
