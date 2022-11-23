@@ -29,15 +29,14 @@ export default function ProductSection() {
                         <div>
                             Premium quality wood pellets as an environmentally friendly biofuel, which has a significantly cheaper price compared to other types of heating.
                         </div>
-
                         <div className="mt-2">
-                            We offer 6 and 8 mm diameter pellets either by 15kg bags or big bag packing , which we produce from clean sawdust with lowest ash content possible out of our own raw materials.
+                            We offer 6 and 8mm diameter pellets either by 15kg bags or big bag packing, which we produce from clean sawdust with the lowest ash content possible (out of our own raw materials).
                         </div>
                     </div>
                 } />
             <ProductCard
                 name="Finger jointed knotfree pine and spruce boards"
-                img_src="/img/00.jpeg"
+                img_src="/img/03.jpg"
                 content={
                     <div className="flex flex-col gap-2">
                         <ul>
@@ -45,6 +44,18 @@ export default function ProductSection() {
                                 <li key={i} className="mb-1.5">{x}</li>
                             ))}
                         </ul>
+                    </div>
+                } />
+            <ProductCard
+                name="Pallet wood cut to lengths"
+                img_src="/img/04.jpg"
+                content={
+                    <div className="flex flex-col gap-2">
+                        {/* <ul>
+                            {product_dims.map((x, i) => (
+                                <li key={i} className="mb-1.5">{x}</li>
+                            ))}
+                        </ul> */}
                     </div>
                 } />
         </div>

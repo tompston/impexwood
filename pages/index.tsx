@@ -26,7 +26,10 @@ export default function Home() {
             <div className='flex flex-col gap-3'>
               <h2 className='leading-none fw-600 md:max-w-[300px]'>Self-sustaining wood processing enterprise</h2>
               <div>
-                <p className='max-w-[400px] '>with the goal of full processing cycle. From planning mill till finger jointing elements and down to pallet and pellet production.</p>
+                <p className='max-w-[400px] '>
+                  with the goal of full processing cycle.
+                  From planning mill, finger jointing elements,
+                  down to pallet and pellet production.</p>
               </div>
               <div>
                 <a href="#contacts" className='fw-400 contact_us__btn'>
@@ -53,7 +56,7 @@ export default function Home() {
           <Section header='History' content={<HistorySection />} />
           <Section header='Products' content={<ProductSection />} />
           <Section header='Gallery' content={<GallerySection />} />
-          <Section header='Contacts' content={<ContactsSection />} sectionClass="bg-zinc-500-- bg-amber-600 text-white px-10 py-8 border-rad-3" />
+          <Section header='Contacts' content={<ContactsSection />} sectionClass="bg-amber-600 text-white px-10 py-8 border-rad-3" />
         </div>
       </ContainerLayout>
 
