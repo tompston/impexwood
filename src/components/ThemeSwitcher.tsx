@@ -1,31 +1,48 @@
 import React from 'react'
 
 // theme switcher
-import { useTheme } from 'next-themes'
+// import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { IS_BROWSER } from 'src/assets/ts'
 
 export default function ThemeSwitcher() {
-    // get the theme hook value on mount
-    // reference -> https://github.com/pacocoursey/next-themes#avoid-hydration-mismatch
-    const [mounted, setMounted] = useState(false)
-    const { theme, setTheme } = useTheme()
     const SHARED_THEME_SWITCHER_CLASSES = "px-2.5 border-rad-4"
+    const [currentTheme, setCurrentTheme] = useState<string>('')
+
+    function LocalStorageTheme() {
+        if (IS_BROWSER()) {
+            return localStorage.getItem("theme")
+        }
+    }
+
+    /** Set / Change all of the needed values */
+    function setTheme(newTheme: string) {
+        if (IS_BROWSER()) {
+            console.log(newTheme)                    // log the new theme
+            localStorage.setItem("theme", newTheme); // set localstorage value
+            document.body.dataset.theme = newTheme;  // set body value
+            setCurrentTheme(newTheme)                // set hook value
+        }
+    }
 
     useEffect(() => {
-        setMounted(true)
+        // get the saved theme if exists, else set to light
+        const savedTheme = LocalStorageTheme() || "light"
+        // If localstorage theme exists, set it as the theme. Else set to light theme
+        if (LocalStorageTheme()) {
+            setTheme(savedTheme)
+        } else {
+            setTheme('light')
+        }
     }, [])
-
-    if (!mounted) {
-        return null
-    }
 
     return (
         <div className='flex gap-3 fs-9'>
             <button onClick={() => setTheme('light')}
-                className={`${SHARED_THEME_SWITCHER_CLASSES} ${theme == 'light' ? 'bg-amber-100 text-black' : ''}`}>Light</button>
+                className={`${SHARED_THEME_SWITCHER_CLASSES} ${currentTheme == 'light' ? 'bg-amber-100 text-black' : ''}`}>Light</button>
             <div>/</div>
             <button onClick={() => setTheme('dark')}
-                className={`${SHARED_THEME_SWITCHER_CLASSES} ${theme == 'dark' ? 'bg-amber-200 text-black' : ''}`}>Dark</button>
+                className={`${SHARED_THEME_SWITCHER_CLASSES} ${currentTheme == 'dark' ? 'bg-amber-200 text-black' : ''}`}>Dark</button>
         </div>
     )
 }

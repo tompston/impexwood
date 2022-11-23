@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <>
       <Header />
+
       <hr className="hr-1-3" />
-      {/* <TopSection /> */}
 
       <ContainerLayout>
         <div className='mt-12 mb-[80px] grid gap-9'>
@@ -37,7 +37,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <img src="/img/tc3.jpeg" alt="" srcSet="" className='flex border-rad-3' />
+            <img src="/img/tc3.jpeg" alt="territory view" srcSet="" className='flex border-rad-3' />
           </div>
 
           {/* Additional Info */}
@@ -51,16 +51,12 @@ export default function Home() {
               over 60 people on daily basis.</p>
           </div>
 
-
-
           <Section header='History' content={<HistorySection />} />
           <Section header='Products' content={<ProductSection />} />
           <Section header='Gallery' content={<GallerySection />} />
           <Section header='Contacts' content={<ContactsSection />} sectionClass="bg-amber-600 text-white px-10 py-8 border-rad-3" />
         </div>
       </ContainerLayout>
-
-
     </>
   )
 }

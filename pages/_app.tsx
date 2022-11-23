@@ -31,9 +31,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image:height" content="100" />
       </Head>
 
-      <ThemeProvider>
+      {/* <ThemeProvider> */}
         <Component {...pageProps} />
-      </ThemeProvider>
+      {/* </ThemeProvider> */}
     </>
   )
 }
