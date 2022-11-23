@@ -4,7 +4,7 @@ export default function ProductSection() {
         <div className="grid grid-cols-4 gap-2 md:grid-cols-2 sm:grid-cols-1">
             <ProductCard
                 name="Finger-jointed glued wood"
-                img_src="/img/00.jpeg"
+                img_src="/img/00.jpg"
                 content={
                     <div>
                         <div>
@@ -23,7 +23,7 @@ export default function ProductSection() {
                 } />
             <ProductCard
                 name="Pellets"
-                img_src="/img/01.jpeg"
+                img_src="/img/01.jpg"
                 content={
                     <div>
                         <div>
@@ -36,7 +36,7 @@ export default function ProductSection() {
                 } />
             <ProductCard
                 name="Finger jointed knotfree pine and spruce boards"
-                img_src="/img/03.jpg"
+                img_src="/img/02.jpg"
                 content={
                     <div className="flex flex-col gap-2">
                         <ul>
@@ -48,7 +48,7 @@ export default function ProductSection() {
                 } />
             <ProductCard
                 name="Pallet wood cut to lengths"
-                img_src="/img/04.jpg"
+                img_src="/img/03.jpg"
                 content={
                     <div className="flex flex-col gap-2">
                         {/* <ul>

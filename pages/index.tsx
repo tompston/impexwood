@@ -24,7 +24,7 @@ export default function Home() {
           {/* Top Block */}
           <div className='grid grid-cols-[520px_1fr] md:grid-cols-[auto] md:grid-rows-[auto_auto] md:gap-5'>
             <div className='flex flex-col gap-3'>
-              <h2 className='leading-none fw-600 md:max-w-[300px]'>Self-sustaining wood processing enterprise</h2>
+              <h2 className='leading-none fw-500 md:max-w-[300px] font-serif'>Self-sustaining wood processing enterprise</h2>
               <div>
                 <p className='max-w-[400px] '>
                   with the goal of full processing cycle.
