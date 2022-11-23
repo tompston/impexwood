@@ -5,7 +5,7 @@ import Head from 'next/head'
 import { ThemeProvider } from 'next-themes'
 
 // Global css
-import '../src/assets/css/index.css'
+import '/src/assets/css/index.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -31,9 +31,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image:height" content="100" />
       </Head>
 
-      {/* <ThemeProvider> */}
+      <ThemeProvider>
         <Component {...pageProps} />
-      {/* </ThemeProvider> */}
+      </ThemeProvider>
     </>
   )
 }
