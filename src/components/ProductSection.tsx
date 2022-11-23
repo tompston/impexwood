@@ -62,7 +62,6 @@ export default function ProductSection() {
     )
 }
 
-
 interface ProductProps {
     name: string
     img_src: string
