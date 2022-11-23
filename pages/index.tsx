@@ -44,11 +44,11 @@ export default function Home() {
           <div>
             <hr className="hr-1-3 mb-5" />
             <p className='max-w-[550px] opacity-80 fs-8'>
-            What started as a simple wood processing company back in 2012, 
-            making knot free components with a few employees and 400m2 
-            meters of production plant has grown into a big scale 
-            plant covering over 4000m2 of the production floor, 
-            employing over 60 people on a daily basis.</p>
+              What started as a simple wood processing company back in 2012,
+              making knot free components with a few employees and 400m2
+              meters of production plant has grown into a big scale
+              plant covering over 4000m2 of the production floor,
+              employing over 60 people on a daily basis.</p>
           </div>
 
           <Section header='History' content={<HistorySection />} />
@@ -62,14 +62,15 @@ export default function Home() {
                 poster="/img/tc3.jpeg"
                 preload="none"
                 controls src="/mp4/factory.mp4"
-                // className="border-rad-1 w-full h-[370px] max-w-[700px] max-h-[600px] border-[3px] border-amber-400 border-2-3-- "
-                className="w-full h-[370px] max-w-[700px] max-h-[600px] "
-                
-                ></video>
+                // className="border-rad-1 w-full h-[370px] max-w-[700px] max-h-[600px] border-[3px] border-amber-400"
+                // className="w-full h-[370px] max-w-[700px] max-h-[600px] "
+                className="w-full h-auto max-w-[700px] max-h-[600px]-- border-rad-1  border-[6px] border-amber-400"
+
+              ></video>
             </div>
           </div>
 
-          <Section header='Contacts' content={<ContactsSection />} sectionClass="bg-amber-600 text-white px-10 py-8 border-rad-3" />
+          <Section header='Contacts' content={<ContactsSection />} sectionClass="bg-amber-600 text-white px-10 py-8 border-rad-3 sm:px-8" />
         </div>
       </ContainerLayout>
     </>
