@@ -16,7 +16,7 @@ export default function ProductSection() {
                         </div>
                         <ul>
                             <li>Window and door components</li>
-                            <li>Structural design material</li>
+                            <li>Structural design materials</li>
                             <li>Slats & Tiles</li>
                         </ul>
                     </div>
@@ -27,10 +27,15 @@ export default function ProductSection() {
                 content={
                     <div>
                         <div>
-                            Premium quality wood pellets as an environmentally friendly biofuel, which has a significantly cheaper price compared to other types of heating.
+                            Premium quality wood pellets as an environmentally friendly biofuel,
+                            which has a significantly cheaper price in comparison
+                            to other types of heating.
                         </div>
                         <div className="mt-2">
-                            We offer 6 and 8mm diameter pellets either by 15kg bags or big bag packing, which we produce from clean sawdust with the lowest ash content possible (out of our own raw materials).
+                            We offer 6 and 8mm diameter pellets either by
+                            15kg bags or big bag packing, which we
+                            produce from clean sawdust with the
+                            lowest ash content possible (out of our own raw materials).
                         </div>
                     </div>
                 } />

@@ -9,7 +9,7 @@ export default function HistorySection() {
                         <h6 className='fs-7 opacity-90 fw-600'>{year.year}</h6>
                         <ul className=''>
                             {year.achievement.map((achievement) => (
-                                <li className='mb-1 opacity-70' key={achievement}>{achievement}</li>
+                                <li className='mb-1 opacity-90' key={achievement}>{achievement}</li>
                             ))}
                         </ul>
                     </div>
@@ -28,13 +28,13 @@ const history: YearAchievement[] = [
     {
         year: "2017",
         achievement: [
-            "Added new pellet factory that reprocesses all waste into fuel pelletswith capacity of 500t/month"
+            "Added a new pellet factory that reprocesses all waste into fuel pellets with capacity of 500t/month"
         ]
     },
     {
         year: "2018",
         achievement: [
-            "Acquired 2,5ha of addition land 1800m2 of production buildings where new planning line was installed in combination with wood eye grading and 2 Opti cut units for automatization of processes",
+            "Acquired 2,5ha of addition land 1800m2 of production buildings where a new planning line was installed in combination with wood eye grading and 2 Opti cut units for automation of processes",
             "Started a Finger jointing line in combination with the 2 Opti cut units"
         ]
     },
@@ -47,8 +47,8 @@ const history: YearAchievement[] = [
     {
         year: "2020",
         achievement: [
-            "New project of putting in place 2000 m2 of production space for additional production units",
-            "Planning line to serve construction market needs inside the domestic market and exports"
+            "New project of putting in place 2000m2 of production space for additional production units",
+            "Planning line to serve construction market needs in the domestic and export markets"
         ]
     },
 ]

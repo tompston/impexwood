@@ -1,7 +1,4 @@
-import React from 'react'
-
 // theme switcher
-// import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 import { IS_BROWSER } from 'src/assets/ts'
 
@@ -28,7 +25,6 @@ export default function ThemeSwitcher() {
     useEffect(() => {
         // get the saved theme if exists, else set to light
         const savedTheme = LocalStorageTheme() || "light"
-        // If localstorage theme exists, set it as the theme. Else set to light theme
         if (LocalStorageTheme()) {
             setTheme(savedTheme)
         } else {

@@ -28,7 +28,7 @@ export default function Home() {
               <div>
                 <p className='max-w-[400px] '>
                   with the goal of full processing cycle.
-                  From planning mill, finger jointing elements,
+                  From planning mill and finger jointing elements,
                   down to pallet and pellet production.</p>
               </div>
               <div>
@@ -43,12 +43,12 @@ export default function Home() {
           {/* Additional Info */}
           <div>
             <hr className="hr-1-3 mb-5" />
-            <p className='max-w-[550px] opacity-70 fs-8'>
-              What started as simple wood processing company back in 2012,
-              making knot free components with a few employees and 400m2
-              meters of production plant has grown in to big scale plant
-              covering over 4000m2 of production floor, employing
-              over 60 people on daily basis.</p>
+            <p className='max-w-[550px] opacity-80 fs-8'>
+            What started as a simple wood processing company back in 2012, 
+            making knot free components with a few employees and 400m2 
+            meters of production plant has grown into a big scale 
+            plant covering over 4000m2 of the production floor, 
+            employing over 60 people on a daily basis.</p>
           </div>
 
           <Section header='History' content={<HistorySection />} />
