@@ -54,6 +54,18 @@ export default function Home() {
           <Section header='History' content={<HistorySection />} />
           <Section header='Products' content={<ProductSection />} />
           <Section header='Gallery' content={<GallerySection />} />
+
+          {/* Video Container */}
+          <div>
+            <div className="flex-center">
+              <video
+                poster="/img/tc3.jpeg"
+                preload="none"
+                controls src="/mp4/factory.mp4"
+                className="border-rad-1 w-full h-[370px] max-w-[700px] max-h-[600px] border-[3px] border-amber-400 border-2-3-- "></video>
+            </div>
+          </div>
+
           <Section header='Contacts' content={<ContactsSection />} sectionClass="bg-amber-600 text-white px-10 py-8 border-rad-3" />
         </div>
       </ContainerLayout>
